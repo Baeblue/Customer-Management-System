@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SearchName {
+
     // 사용자의 이름을 작성.
     private String search;
 }

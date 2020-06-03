@@ -1,19 +1,3 @@
-//plugins {
-//    id 'java'
-//}
-//
-//group 'com.example'
-//version '1.0-SNAPSHOT'
-//
-//sourceCompatibility = 1.8
-//
-//repositories {
-//    mavenCentral()
-//}
-//
-//dependencies {
-//    testCompile group: 'junit', name: 'junit', version: '4.12'
-//}
 plugins {
     id 'org.springframework.boot' version '2.2.5.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
@@ -39,10 +23,9 @@ repositories {
 }
 
 dependencies {
-    // implementation 'org.springframework.cloud:spring-cloud-starter'   // bootstrap 추가.
-    compile 'org.webjars:jquery:3.4.1'       // 추가.
-    compile 'org.webjars:jquery-ui:1.12.1'   // 추가.
-    compile 'org.webjars:bootstrap:3.3.4'  // 추가.  3.3.4 한 이유는 html 파일에서 주소를 그렇게 썼기 때문.
+    compile 'org.webjars:jquery:3.4.1'
+    compile 'org.webjars:jquery-ui:1.12.1'
+    compile 'org.webjars:bootstrap:3.3.4'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
@@ -50,17 +33,12 @@ dependencies {
     implementation 'org.flywaydb:flyway-core'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    implementation 'com.h2database:h2'   // runtimeOnly 'com.h2database:h2'  // compile
+    implementation 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
 }
-//dependencyManagement {    // bootstrap 추가하면서 같이 추가.
-//    imports {
-//        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
-//    }
-//}
 
 test {
     useJUnitPlatform()
